@@ -6,7 +6,8 @@ import numpy as np
 import re
 import torch.nn as nn
 import nltk
-nltk.download('punkt')
+
+nltk.data.path.append('./nltk_data/')
 app = Flask(__name__)
 
 words = pickle.load(open('words.pkl', 'rb'))
